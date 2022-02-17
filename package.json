@@ -1,0 +1,28 @@
+{
+  "name": "firestore_security_rules_test",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/052hide/firestore_security_rules_test.git"
+  },
+  "author": "052hide (hidetoshi1990@gmail.com)",
+  "bugs": {
+    "url": "https://github.com/052hide/firestore_security_rules_test/issues"
+  },
+  "homepage": "https://github.com/052hide/firestore_security_rules_test#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.4",
+    "@babel/preset-env": "^7.16.11",
+    "@firebase/rules-unit-testing": "^2.0.2",
+    "babel-jest": "^27.5.1",
+    "firebase": "^9.6.6",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "jest": "^27.5.1",
+    "uuid": "^8.3.2"
+  }
+}

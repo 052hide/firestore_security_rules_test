@@ -1,0 +1,26 @@
+rules_version = '2';
+
+service cloud.firestore {
+  function isAuth() {
+    return request.auth != null;
+  }
+
+  function isStaff() {
+    return request.auth.token.isStaff
+  }
+
+  function isMyCompany(companyId) {
+    return request.auth.token.companyId == companyId;
+  }
+
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read: if false;
+      allow write: if true;
+    }
+
+    match /companies/{companyId}/{document=**} {
+      allow read: if isAuth() && isStaff() && isMyCompany(companyId);
+    }
+  }
+}
