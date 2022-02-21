@@ -26,7 +26,7 @@ const getDB = () => {
   const staffClientDB = staffContext.firestore()
 
   // 認証済スタッフ カスタムクレームにcompanyUidが存在する
-  const hasCompanyContext = testEnv.authenticatedContext(uid, { isStaff: true, companyId: companyUid })
+  const hasCompanyContext = testEnv.authenticatedContext(uid, { isStaff: true, companyIds: [companyUid] })
   const hasCompanyClientDB = hasCompanyContext.firestore()
 
   return {

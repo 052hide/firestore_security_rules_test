@@ -10,7 +10,7 @@ service cloud.firestore {
   }
 
   function isMyCompany(companyId) {
-    return request.auth.token.companyId == companyId;
+    return request.auth.token.companyIds.hasAny([companyId]);
   }
 
   match /databases/{database}/documents {
